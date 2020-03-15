@@ -2107,14 +2107,14 @@ label.mt10.valid {
     z-index: 500;
     right: 2em;
 }
-.get_quote{
+.get_quote {
     font-family: 'Libre Baskerville', serif;
-            text-align: center;
-            color: black;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+    text-align: center;
+    color: black;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .scrolltotop {
