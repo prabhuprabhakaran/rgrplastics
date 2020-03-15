@@ -2101,6 +2101,12 @@ label.mt10.valid {
 /*---------------------------------
     17. SCROLL TO TOP AREA
 ----------------------------------*/
+.shopping_cart {
+    position: fixed;
+    top: 5em;
+    z-index: 500;
+    right: 2em;
+}
 
 .scrolltotop {
     background: #ffffff none repeat scroll 0 0;

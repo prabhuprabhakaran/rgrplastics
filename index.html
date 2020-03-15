@@ -38,6 +38,7 @@
     <link href="css/responsive.css" rel="stylesheet" />
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
     <!--[if lt IE 9]>
       <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -55,7 +56,7 @@
     </div>
 
     <!--SCROLL TO TOP-->
-    <a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
+    <a href="#home" class="scrolltotop"><i class="fa fa-arrow-up"></i></a>
 
     <!--START TOP AREA-->
     <header class="top-area" id="home">
@@ -110,6 +111,14 @@
     </header>
     <!--END TOP AREA-->
 
+    <a href="#home" class="shopping_cart" onclick="sendEmail()">
+        <div class="qs-box wow fadeInUp " data-wow-delay="0.4s">
+            <div class="qs-box-icon">
+                <i class="material-icons">shopping_cart</i>
+            </div>
+        </div>
+    </a>
+
     <!--FEATURES TOP AREA-->
     <section class="features-top-area padding-50-50" id="about">
         <div class="container">
@@ -121,15 +130,21 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12 mb50" style="text-align: justify;">
-                    <p>Established in 1989, <b>R G R Plastics</b> has made a name for itself in the list of top plastic container manufacturer/seller in Tamilnadu, India.
-                        We have rich experience in blow and injection mould structures.
-                        The company is located in Kumbakonam, Tamilnadu, India.
+                <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 col-sm-12 col-xs-12 mb50" style="text-align: justify;">
+                    <p><b>K R Govindarajan</b> started <b>R G R Plastics</b> as a small company in 1989 at Kumbakonam, Tamilnadu, India.
+                        He faced a tough competition to sell his good quality product in the market.
+                        He strated manufacturing with small plastic containers using manual and semi automatic machines.
+                        Over the year with his hard effort and quality, He developed the company with fully automated machines also reached to more customers.
                     </p>
-                    <p><b>R G R Plastics</b> is one of the leading sellers of HDPE, LDPE, PP plastic products all over Tamilnadu.
-                        It is a quality driven organization offering a wide range of injection mould, blow mould plastic products in a affordable price within preset time limit.</p>
                     <p>
-                        <b>R G R Plastics</b> is listed in Trade India's list of verified sellers offering supreme quality and bulk quantity.
+                        <b>Veeramanikandan</b> son of K R Govindarajan joined his father and started involving
+                        in the business on part time basis from 2010 after completing schooling and started full time
+                        concentration after his graduation from 2014. His Vision is to improve the company to next level with his innovative ideas.
+                    </p>
+                    <p>Now, <b>R G R Plastics</b> is one of the leading sellers of HDPE, LDPE, PP plastic products all over Tamilnadu.
+                        <b>R G R Plastics</b> has made a name for itself in the list of top plastic container manufacturer/seller in Tamilnadu, India.
+                        It is a quality driven organization offering a wide range of injection mould, blow mould plastic products in a affordable price within preset time limit.
+                        We have rich experience in blow and injection mould structures. <b>R G R Plastics</b> is listed in Trade India's list of verified sellers offering supreme quality and bulk quantity.
                     </p>
                 </div>
             </div>
@@ -229,7 +244,10 @@
                     <div class="area-title text-center wow fadeIn mb0">
                         <h2>Products</h2>
                         <p>
-                            We produce plastic containers in various custom shapes. We have the experience to deliver a wide range of different types of containers as per customer needs.
+                            We produce plastic containers in various custom shapes.
+                            We have the experience to deliver a wide range of different types of containers as per customer needs.
+                            <br />
+                            You can block your order by adding into cart and sending us via whatsapp.
                         </p>
                     </div>
                 </div>
@@ -256,9 +274,21 @@
             </div>
         </div>
     </section>
-
+    <script>
+        function sendEmail() {
+            Email.send({
+                SecureToken: "38f07450-846f-43e4-a0eb-cc02c9896137",
+                To: 'p.r.c.prabhu@gmail.com',
+                From: "p.r.c.prabhu@gmail.com",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
     <!--CONTACT US AREA-->
-    <section class="intro-area relative padding-100-50 white" id="contact">
+    <section class="intro-area relative padding-50-50 white" id="contact">
         <div class="area-bg"></div>
         <div class="container">
             <div class="row">
@@ -287,7 +317,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col  col-md-offset-2 col-md-9 col-xl-9" style="font-size: medium;">
-                                            <a class="fa fa-whatsapp" href="tel:+919500369437">&nbsp;+91-95003-69437</a>
+                                            <a class="fa fa-phone" href="tel:+919500369437"></a> <a class="fa fa-whatsapp" href="https://api.whatsapp.com/send?phone=919500369437">&nbsp;+91-95003-69437</a>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -309,20 +339,23 @@
                                     </div>
                                     <div class="row">
                                         <div class="col col-md-offset-2 col-md-9 col-xl-9" style="font-size: medium;">
-                                            <a class="fa fa-whatsapp" href="tel:+919789348099">&nbsp;+91-97893-48099</a>
+                                            <a class="fa fa-phone" href="tel:+919789348099">&nbsp;+91-97893-48099</a>
                                         </div>
                                     </div>
 
                                 </div>
                                 <div class="col col-md-2 col-xl-2">&nbsp;</div>
                                 <div class="col col-md-5 col-xl-5" style="text-align: left;">
-                                    <h3><strong><i class="fa fa-cab" href="https://goo.gl/maps/GRMS5pgrSmUw1paYA"></i> Locate us</strong></h3>
+                                    <h3><strong><i class="fa fa-cab"></i> Locate us</strong></h3>
                                     # 2/501, Railway Station Road,<br />
                                     Thiruvalanjuli, <br />
                                     Kumbakonam, <br />
                                     Tamilnadu - 612302.<br />
                                     <a class="fa fa-map-marker faa-horizontal animated" href="https://goo.gl/maps/GRMS5pgrSmUw1paYA">&nbsp;Click to navigate on GMaps</a>
                                 </div>
+                            </div>
+                            <div class="row mt20" style="text-align: center;">
+                                We are accepting payments via NEFT, IMPS, All UPI (Like GPay & PhonePe) also.
                             </div>
                         </div>
                     </div>
