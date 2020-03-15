@@ -113,9 +113,10 @@
 
     <a href="#home" class="shopping_cart" onclick="sendEmail()">
         <div class="qs-box wow fadeInUp " data-wow-delay="0.4s">
-            <div class="qs-box-icon">
-                <i class="material-icons">shopping_cart</i>
+            <div class="qs-box-icon" style="text-align: center;">
+                <i class="material-icons" style="margin-bottom: 0px;">shopping_cart</i>
             </div>
+            <span class="get_quote">GET QUOTE</span>
         </div>
     </a>
 
@@ -276,15 +277,17 @@
     </section>
     <script>
         function sendEmail() {
-            Email.send({
-                SecureToken: "38f07450-846f-43e4-a0eb-cc02c9896137",
-                To: 'p.r.c.prabhu@gmail.com',
-                From: "p.r.c.prabhu@gmail.com",
-                Subject: "This is the subject",
-                Body: "And this is the body"
-            }).then(
-                message => alert(message)
-            );
+            alert("You can enquire order and price quote shortly, Under Construction")
+            return;
+            // Email.send({
+            //     SecureToken: "38f07450-846f-43e4-a0eb-cc02c9896137",
+            //     To: 'p.r.c.prabhu@gmail.com',
+            //     From: "p.r.c.prabhu@gmail.com",
+            //     Subject: "This is the subject",
+            //     Body: "And this is the body"
+            // }).then(
+            //     message => alert(message)
+            // );
         }
     </script>
     <!--CONTACT US AREA-->

@@ -2107,6 +2107,15 @@ label.mt10.valid {
     z-index: 500;
     right: 2em;
 }
+.get_quote{
+    font-family: 'Libre Baskerville', serif;
+            text-align: center;
+            color: black;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+}
 
 .scrolltotop {
     background: #ffffff none repeat scroll 0 0;
