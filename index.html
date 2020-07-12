@@ -34,15 +34,19 @@
     <link href="css/material-icons.css" rel="stylesheet" />
 
     <!--====== MAIN STYLESHEETS ======-->
-    <link href="style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"> </script>
+    <script type="text/javascript" src="assests/products.json"></script>
     <!--[if lt IE 9]>
       <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="assests/products.json"></script>
+    <script type="text/javascript" src="js/data.js"></script>
 </head>
 
 <body class="home-three" data-spy="scroll" data-target=".mainmenu-area" data-offset="90">
@@ -67,7 +71,7 @@
                 <nav class="navbar">
                     <div class="container">
                         <div class="navbar-header">
-                            <a href="#home" class="navbar-brand"><img src="img/rgr/logo-f.png" alt="logo" style="width: 9em;"/></a>
+                            <a href="#home" class="navbar-brand"><img src="img/rgr/logo-f.png" alt="logo" style="width: 9em;" /></a>
                         </div>
                         <div id="main-nav" class="stellarnav">
                             <ul id="nav" class="nav navbar-nav pull-right">
@@ -91,7 +95,7 @@
                         <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                             <div class="welcome-text">
                                 <h2 class="text-uppercase">The Best Plastic containers for your products</h1>
-                                    <p>We are manufacturing best industrial grade HDPE, LDPE and PP plastic containers at your budget</p>
+                                    <p>We are manufacturing best industrial grade HDPE, LDPE and PP plastic containers with virgin and re-processed materials at your budget</p>
                                     <p>Herbal/Ayurvedic/Homeopathic Medicine, Lab, Chemical, Acid, PET, Food, Tablet and Utility containers are available.</p>
                             </div>
                         </div>
@@ -193,22 +197,6 @@
 
     <section class="video-area relative padding-50-50 style-three white " id="technology">
         <div class="area-bg" data-stellar-background-ratio="0.6"></div>
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
-                    <div class="area-title text-center wow fadeIn">
-                        <h2>Technology</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="mb50" style="text-align: justify;">
-                    <p>Established in 1989, <b>R G R Plastics</b> has made a name for itself in the list of top plastic container manufacturer/seller in Tamilnadu, India.
-                        The company is located in Kumbakonam, Tamilnadu, India.
-                    </p>
-                </div>
-            </div>
-        </div> -->
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-12 col-xs-12">
@@ -222,7 +210,7 @@
                     <p><strong>RGR plastics</strong> is backed with cutting-edge technology and fully automated blow moulding and injection moulding machineries.
                         We can do any color any shape between 10 ml to 1000 ml of
                         Herbal/ Ayurvedic/ Homeopathic Medicine, Lab, Chemical, Acid, PET, Food, Tablet and Utility containers
-                        with fully virgin HDPE, LDPE, PP plastics materials.
+                        with HDPE, LDPE, PP grades using virgin/RP materials.
                     </p>
                     <p>
                         We have fully integrated quality control procedures to verify every step before next manufacturing process, Our QC department will record every batch production to make each production traceability.
@@ -256,24 +244,25 @@
             <div class="row">
                 <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <ol class="carousel-indicators" id="our_products_data_1">
                         </ol>
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img class="d-block w-100 aligncenter" src="https://source.unsplash.com/random/900x400" alt="900x400" data-holder-rendered="true">
-                            </div>
-                            <div class="item">
-                                <img class="d-block w-100 aligncenter" src="https://source.unsplash.com/random/800x400" alt="900x400" data-holder-rendered="true">
-                            </div>
+                        <div class="carousel-inner" id="our_products_data_2">
                         </div>
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <script>
+                            document.getElementById("our_products_data_1").innerHTML = ourProductsIDHTML;
+                            document.getElementById("our_products_data_2").innerHTML = ourProductsDataHTML;
+                        </script>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!--CONTACT US AREA-->
@@ -342,7 +331,7 @@
                                     Tamilnadu - 612302.<br />
                                     <a href="https://goo.gl/maps/GRMS5pgrSmUw1paYA">
                                         <div class="qs-box wow fadeInUp " data-wow-delay="0.4s">
-                                            <div class="qs-box-icon" >
+                                            <div class="qs-box-icon">
                                                 <i class="material-icons" style="padding-top: 6px;width: 45px;height: 45px;margin-bottom: 0px;">place</i> Click to navigate
                                             </div>
                                         </div>
@@ -411,15 +400,15 @@
         function sendEmail() {
             alert("You can enquire order and price quote shortly, Under Construction")
             return;
-            // Email.send({
-            //     SecureToken: "38f07450-846f-43e4-a0eb-cc02c9896137",
-            //     To: 'p.r.c.prabhu@gmail.com',
-            //     From: "p.r.c.prabhu@gmail.com",
-            //     Subject: "This is the subject",
-            //     Body: "And this is the body"
-            // }).then(
-            //     message => alert(message)
-            // );
+            Email.send({
+                SecureToken: "38f07450-846f-43e4-a0eb-cc02c9896137",
+                To: 'p.r.c.prabhu@gmail.com',
+                From: "p.r.c.prabhu@gmail.com",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
         }
     </script>
 </body>

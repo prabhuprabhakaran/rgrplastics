@@ -1,0 +1,18 @@
+.carousel-control {
+  color: #00d4f5;
+}
+
+.carousel-control:focus,
+.carousel-control:hover {
+  color: #7aed91;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
+}
+
+.carousel-indicators li {
+  background-color: rgb(0, 213, 244);
+  border: 1px solid #77ed92;
+}
